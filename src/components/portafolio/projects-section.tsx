@@ -25,12 +25,12 @@ const projects = [
     category: "Full Stack",
   },
   {
-    name: "Hooks App",
+    name: "CalendarMern",
     description:
-      "Aplicacion que tiene varias actividades para comprobar el estado de todos los hooks presentados en JS/React, las actidades son ludicas por ende cualquier persona puede entrar",
-    tech: ["Node.js", "JS", "React"],
-    github: "https://github.com/daniel-barona/HooksApp",
-    demo: "https://daniel-barona.github.io/HooksApp/",
+      "una aplicación de calendario para gestionar eventos personales, de estudio, familia y trabajo. Construida con **React, TypeScript y Vite**, con autenticación mediante **JWT** y persistencia de datos en una API REST (Node.js + Express + MongoDB).\n\nSi no deseas usar un usuario puedes usar:\n\n- Correo: `test2@gmail.com`\n- Contraseña: `Test2_123*`",
+    tech: ["Node.js", "JS", "React", "MongoDB", "Express", "TypeScript"],
+    github: "https://github.com/daniel-barona/CalendarMernFrontend",
+    demo: "https://my-calendar-app-beta-three.vercel.app/",
     featured: true,
     image: null,
     category: "Full Stack",
@@ -76,6 +76,27 @@ const projects = [
     github: "https://github.com/daniel-barona/videogames",
     demo: null,
     featured: false,
+    image: null,
+    category: "Full Stack",
+  },
+  {
+    name: "TesloShop",
+    description:
+      "Tienda en linea estilo e-commerce inspirada en Tesla, construida con React y TypeScript. Permite a los usuarios navegar productos, filtrarlos por genero, talla y precio, e iniciar sesion para acceder a un panel de administracion con CRUD de productos.",
+    tech: ["Next.js", "React", "Tailwind", "TypeScript"],
+    github: "https://github.com/daniel-barona/teslo-shop-frotend",
+    demo: "https://teslo-react-frontend.netlify.app/",
+    featured: false,
+    image: null,
+    category: "Full Stack",
+  },
+  {
+    name: "SIPSA - Ciencia de datos",
+    description:"Este proyecto está diseñado para procesar, analizar y modelar los datos mensuales de precios mayoristas del SIPSA (Sistema de Información de Precios y Abastecimiento del Sector Agropecuario) del DANE, con cobertura histórica 2013 – 2026. El flujo de trabajo incluye la descarga de datos, consolidación, limpieza, análisis exploratorio de datos (EDA) y modelado predictivo (ARIMA/SARIMA).",
+    tech: ["Python", "Pandas", "Numpy", "Matplotlib", "Seaborn", "Streamlit"],
+    github: "https://github.com/daniel-barona/proyecto_ciencia_datos",
+    demo: "https://proyectocienciadatos-qmnztotitxxcstru4dsxrd.streamlit.app/",
+    featured: true,
     image: null,
     category: "Full Stack",
   },
@@ -139,7 +160,18 @@ export function ProjectsSection() {
 
         <div className="mt-5 flex items-center gap-2 rounded-2xl bg-muted/60 px-4 py-3 text-sm text-muted-foreground">
           <Layers3 className="size-4 text-primary" />
-          <span>{visibleProjects.length} proyectos visibles</span>
+          <span>
+            {visibleProjects.length} proyectos visibles. Para visitar más, puedes ir{" "}
+            <a
+              href="https://github.com/daniel-barona?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-primary underline underline-offset-4 hover:text-primary/80"
+            >
+              a mis repositorios de GitHub
+            </a>
+            .
+          </span>
         </div>
       </div>
     </section>
@@ -168,7 +200,7 @@ function ProjectCard({
           )}
         </div>
         <CardTitle className="mt-3 text-xl font-semibold">{project.name}</CardTitle>
-        <CardDescription className="text-sm leading-relaxed">
+        <CardDescription className="whitespace-pre-line text-sm leading-relaxed">
           {project.description}
         </CardDescription>
       </CardHeader>

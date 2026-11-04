@@ -13,7 +13,7 @@ const studies = [
     degree: "Ingeniería de Sistemas",
     institution: "Universidad Libre seccional Cali",
     location: "Cali, Colombia",
-    period: "2019 — 2026",
+    period: "2020 — 2026",
     status: "Cursando",
     description:
       "Culminado el plan de estudios; Este programa académico proporciona una sólida base en ciencias de la computación, software, redes y bases de datos, junto con un enfoque en la innovación y la solución de problemas complejos.",
